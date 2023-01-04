@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    border: none;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    color: #3a3a3a;
+  }
+
+h1, h2 {
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color:rgb(43, 43, 43)
+}
+
+/* header and nav bar */
+
+header h1 {
+    float: left;
+    font-size: 200%;
+    margin-left: 30px;
+}
+
+nav ul {
+    float:right;
+    font-size: 110%;
+}
+nav li {
+    display:inline-block;
+    list-style-type: none;
+    margin-right: 30px;
+}
+nav a {
+    text-decoration: none;
+    color:inherit;
+}
+nav a:hover, .active {
+    border-bottom: 1px solid #3a3a3a
+}
+header h1, header nav ul {
+    line-height: 75px;
+}
+
+/* section 1 (#index is section:nth-of-type(1)) */
+
+#index {
+    height: 600px;
+    width: 100%;
+    overflow:hidden;
+    position: relative;
+}
+@keyframes hero-zoom {
+    from{transform: scale(1)}
+    to{transform: scale(1.1)}
+}
+section:nth-of-type(1) > div:nth-of-type(1) {
+    height: 600px;
+    width: 100%;
+    background: url("../images/hero-image.webp") no-repeat center center;
+    /* animation */
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+#index h3, #index h2 {
+    color: #fff;
+}
+
+
+section:nth-of-type(1) > div:nth-of-type(2) {
+    font-size:130%;
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    width: 300px;
+    height: 200px;
+    padding-left: 10px;
+    padding-top: 40px;
+
+    background-color: rgb(241, 109, 107, 0.7);
+    bottom: 30px;
+    right:150px;
+    position:absolute;
+}
+
+/* section 2 */
+
+hr {
+    border-top: 1px solid #3a3a3a;
+    margin:5px;
+}
+section:nth-of-type(2) > h2 {
+    text-align: center;
+    margin:20px;
+}
+section:nth-of-type(2) {
+    height: 600px;
+}
+section:nth-of-type(2) > div:nth-of-type(1) { /*left*/
+    padding-top: 30px;
+    width:33%;
+    float:left;
+}
+section:nth-of-type(2) > div:nth-of-type(1) > div {
+    width: 60%;
+    float:right;
+    line-height: 20px;
+    margin-bottom: 50px;
+    clear:both;
+}
+section:nth-of-type(2) > div:nth-of-type(2) { /*right*/
+    padding-top: 30px;
+    width:33%;
+    float:right;
+}
+section:nth-of-type(2) > div:nth-of-type(2) > div {
+    width: 60%;
+    float:left;
+    line-height: 20px;
+    margin-bottom: 50px;
+    clear:both;
+    text-align:right;
+}
+section:nth-of-type(2) > div:nth-of-type(3) { /*centre*/
+    padding-top: 30px;
+    width:33%;
+    margin:auto;
+}
+section:nth-of-type(2) > div:nth-of-type(3) > div { /* container */
+    width:300px;
+    height:300px;
+    padding:30px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+    border-radius: 50%;
+    margin: auto;
+}
+section:nth-of-type(2) > div:nth-of-type(3) > div > div { /* img */
+    background: url("../images/ethos-center-image.jpg") no-repeat center center;
+    height:100%;
+    overflow:hidden;
+    border-radius: 50%;
+}
+
+/* section 3 */
+
+section:nth-of-type(3) {
+    background-image: url("../images/dublin-city.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+    background-position: center center;
+    width: 100%;
+}
+section:nth-of-type(3) > div {
+    color: #fafafa;
+    background-color: rgb(0, 0, 0, 0.6);
+    width:20%;
+    height:300px;
+    float:left;
+    padding-top: 70px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    text-align: center;
+}
+section:nth-of-type(3) h2 {
+    color: #fafafa;
+}
+footer {
+    height:20%;
+    padding:10%;
+    background-color: lightgray;
+}
+footer ul {
+    text-align: center;
+    height:auto;
+}
+footer li {
+    display:inline-block;
+    margin:0% 10%;
+}
+footer i {
+    font-size:160%;
+    margin:1%;
+    padding:5%;
+    color:#3a3a3a;
+
+} 
+/* gallery */
+#photos {
+    clear:both;
+    line-height: 0;
+    column-count: 4;
+    column-gap: 0;
+}
+#photos > img {
+    width:100%;
+}
+
+@media screen and (max-width:1200px) {
+    section:nth-of-type(2) {
+        width: 65%;
+        height: 1200px;
+        margin:auto;
+    }
+    section:nth-of-type(2) > div:nth-of-type(1), section:nth-of-type(2) > div:nth-of-type(2), section:nth-of-type(2) > div:nth-of-type(3)  { /*left*/
+        padding-bottom: 30px;
+        padding-top: 0;
+        width:100%;
+        float:left;
+    }
+    hr {
+        display:none;
+    }
+    section:nth-of-type(3) > div {
+        width:100%;
+        clear: both;
+        height: 150px;
+        padding:0;
+    }
+    #photos {
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    nav {
+        clear: left;
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+    section:nth-of-type(1) > div:nth-of-type(2) {
+        left:0;
+
+    }
+    section:nth-of-type(2) {
+        width: 90%;
+        height: 1200px;
+        margin:auto;
+    }
+    section:nth-of-type(2) > div:nth-of-type(1) > div, section:nth-of-type(2) > div:nth-of-type(2) > div { /*left*/
+        width:inherit;
+        text-align: center;
+
+    }
+    #photos {
+    column-count: 2;
+    }
+}
